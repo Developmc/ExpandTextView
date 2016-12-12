@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExpandTextView">
+        <attr name="textSize" format="float"/>
+        <attr name="textColor" format="color"/>
+        <attr name="text" format="string"/>
+        <attr name="maxLine" format="integer"/>
+        <attr name="duration" format="integer"/>
+        <attr name="imageGravity" format="string"/>
+    </declare-styleable>
+</resources>
