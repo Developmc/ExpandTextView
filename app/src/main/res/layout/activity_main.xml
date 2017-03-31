@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:text="@string/long_string"
-            app:maxLine="3"
+            app:maxLine="1"
             app:duration="300"/>
         <Button
             android:id="@+id/bt_1"
@@ -29,9 +29,9 @@
             android:id="@+id/expandTextView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:text="@string/long_string"
-            app:maxLine="3"
-            app:duration="300"/>
+            app:text="@string/app_name"
+            app:maxLine="1"
+            app:duration="300" />
     </RelativeLayout>
 
 </ScrollView>

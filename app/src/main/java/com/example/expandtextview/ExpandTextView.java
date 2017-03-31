@@ -37,7 +37,8 @@ public class ExpandTextView extends LinearLayout {
     protected int maxLine = defaultMaxLine;
     protected String text;
     protected int durationMillis = defaultDurationMillis;
-    protected String imageGravity;
+    //完全展开时的行数
+    private int expandLines ;
 
     //保存当前的状态，展开还是折叠
     private boolean isExpand = false;
@@ -92,7 +93,8 @@ public class ExpandTextView extends LinearLayout {
         contentView.post(new Runnable() {
             @Override
             public void run() {
-                expandView.setVisibility(contentView.getLineCount()>maxLine?View.VISIBLE:View.GONE);
+                expandLines = contentView.getLineCount();
+                expandView.setVisibility(expandLines>maxLine?View.VISIBLE:View.GONE);
             }
         });
     }
