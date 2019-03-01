@@ -11,12 +11,35 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
+
+    signingConfigs {
+        debug {
+            keyAlias "key0"
+            keyPassword "1457tpkj902"
+            storeFile file("../clementTest.jks")
+            storePassword "1457tpkj902"
+        }
         release {
+            keyAlias "key0"
+            keyPassword "1457tpkj902"
+            storeFile file("../clementTest.jks")
+            storePassword "1457tpkj902"
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
